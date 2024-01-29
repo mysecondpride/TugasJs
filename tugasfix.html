@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let fruits = [
+  ["anggur", 20_000, "400"],
+  ["pepaya", 8_000, "600"],
+  ["manggis", 45_000, 450],
+];
+let prop = [" buah:", "harga:", "stock:"];
+
+let cart=[]
+
+
+
+while (true) {
+  let input =
+    prompt(` Selamat datang di Budi Mart "toko buah Fresh", silahkan pilih menu di bawah ini:
+    1. menampilkan daftar buah-buahan
+    2. Menambah buah
+    3. Menghapus buah
+    4. Membeli buah
+    5. Exit`);
+
+    
+  if (input == 1) {
+    let daftar_buah=""
+    for (index=0; index<fruits.length; index++){
+      for( index1=0; index1<fruits.length; index1++){
+        daftar_buah +=`${prop[index1]}${fruits[index][index1]}\n`
+    }
+    
+  }
+  alert(daftar_buah)
+     
+  } else if (input == 2) {
+        let add_buah = prompt(`silahkan menambahkan buah anda dengan format: nama_buah, harga, stock`)
+        fruits[fruits.length]=[add_buah.split(',')[0], parseInt(add_buah.split(',')[1]), parseInt(add_buah.split(',')[2])]
+        let render=""
+        for (let index=0; index<fruits.length; index++){
+        render=`${render} ${index+1} ${fruits[index]} \n`
+       }
+       alert(render)   
+  }
+
+  else if (input == 3) {
+    let render=""
+        for (let index=0; index<fruits.length; index++){
+        render=`${render}${index+1}.${fruits[index]} \n`}
+    let fruits1=+prompt(`silahkan menghapus buah yang anda pilih
+${render}`
+
+)
+
+
+if (fruits1==1){delete fruits[0]
+  alert(render)
+} else if(fruits1==2){delete fruits[1]
+  alert(render)
+}else if (fruits1==3){delete fruits[2]
+  alert(render) 
+}else if (fruits1==4){delete fruits[3] 
+  alert(render) 
+}
+
+// PR bagaimana mereset input=3 menjadi kosong kembali 
+// PR undifinednya harus hilang
+} else if (input == 4) {
+
+  let render=""
+        for (let index=0; index<fruits.length; index++){
+        render=`${render}${index+1}.${fruits[index]} \n`}
+
+  let buyingfruits=+prompt(`berikut keranjang anda
+"${cart}" 
+
+Masukkan buah berikut ke keranjang!!
+${render} `)
+
+
+if(buyingfruits==1){  for (let index=0; index>=buyingfruits-1; index--){
+
+  cart.push(`${index+1}. ${fruits[index]} `)
+  }
+    
+      
+}else if(buyingfruits==2){ for(let index1=1; index1>=1; index1--){
+  cart.push(`${index1+1}. ${fruits[index1]} `)
+ alert(`${cart}`)}
+
+}else if(buyingfruits==3){for(let index2=2; index2>=2; index2--){
+  cart.push(`${index2+1}. ${fruits[index2]} `)
+  alert(`${cart}`)
+}
+
+
+
+}else if(buyingfruits==4){for(let index3=3; index3>=3; index3--){
+  cart.push(`${index3+1}. ${fruits[index3]} `)
+  alert(`${cart}`)}
+}}else if (input == 5) {
+  break} 
+}
+
+console.log(cart)
+
+// }
+
+
+
+// else if (buyingfruits==3 ){ for(let index=buyingfruits-1; index<fruits.length; index++){
+//   for (let index1=0; index1>=index; index1--)
+//  { cart+=`${index+1}. ${fruits[index]} \n`}
+// }
+// alert(`${cart}`)
+
+// }else if (buyingfruits==4){ for(let index=buyingfruits-1; index<fruits.length; index++){
+//   for (let index1=0; index1>=index; index1--)
+//  { cart+=`${index+1}. ${fruits[index]} \n`}
+
+// }
+
+// alert(`${cart}`)
+// }
+// }
+
+
+  </script>
+</body>
+</html>
