@@ -1,0 +1,29 @@
+1.  nomor PO (purchasing order) jangan sampai kembar--PO/INPCAK/2024/01/001 (tahun, bulan, nomor)
+jika ganti bulan, juga ganti bulan.(syarat ttd dua belah pihak, tempo pembayaran, nama barang, harga, qty)
+nomor jurnal umum juga demikian
+NB: jika sebulan lebih dari 900 maka jadi 4 digit yang kode belakang
+2. semua akun bisa di excellkan dan export import data.
+3. Tampilan harus tabel normal (lajur kolom ke kanan)
+4. Jika ada PO--generate ke surat penerimaan barang (lembar penerimaan barang)
+5. Saat barang datang alurnya adalah ke persediaan (bahan baku)
+6. Jurnal umum meliputi tanggal, Kode jurnal, no transaksi, nama akun(COA) kode kategori produk, keterangan(manual untuk mengingat history), catatan, debet , kredit
+7. Kode jurnal meliputi (PO, GJ(jarang) (jurnal umum), KK, KM, INV)
+8. Laporan penerimaan barang harus dipatenkan, karena LPB mengikat harga yang telah disepakati dan qty yang disepkati. BIla ingin
+merubah qty PO, ya jangan diterima bila ada barang datang.atau cancel
+9. Tingkatan user perlu autorosasi agar tidak terjadi fraud,
+contoh kasus perubahan PO (yang harus di tetapkan oleh atasan dan tidak bisa diubah ubah oleh admin yang lain)
+10. LPB ==> langsung masuk jurnal...
+11. KK dikunci kreditnya pasti bank
+12 KM (penjulan/ pelunasan piutang)dikunci debetnya pasti bank
+13 standart nama akun:
+-aset 1
+-hutang 2
+-modal	3
+-pendapatan 4
+-HPP 5
+-biaya/beban 6  
+- pendapatan dan biaya lain lain 7
+14 kas nantinya di bagi menjadi beberapa COA (akun), tentunya yang mempermudah adalah coa dalam bentuk masuk dan keluar untuk Bank,
+tunai, kas kecil, kas besar
+15. kas kecil adalah suatu perusahaan 
+16. 

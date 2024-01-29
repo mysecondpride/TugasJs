@@ -1,0 +1,94 @@
+<html>
+<script>
+// let anggur =20_000
+// let apel =15_000
+// let pisang= 8_000
+
+let prop = ['Nama : ','Harga : ', 'Stock : '];
+let buah_buahan = [
+  ["anggur", 20000,10],
+  ["apel", 15000,12],
+  ["pisang", 8000,5],
+];
+
+
+
+// menu utama
+
+let list_angka= [1,2,3,4,5]
+let list_menu = [
+  'Menampilkan daftar buah-buah', 'Menambah buah', 'Menghapus buah', 
+  'Membeli buah', 'Exit']
+
+
+
+let firstDisplay=""
+for(index1= 0; index1<list_angka.length; index1++ ){
+  for(index2=index1; index2>=index1; index2--){
+  firstDisplay=`${firstDisplay}${list_angka [index1]}   ${list_menu[index2]} \n`
+}
+}
+
+let input=prompt(firstDisplay)
+
+
+
+// menampilkan daftar buah
+let daftar_buah=""
+if(input==1)
+{for (let listBuah = 0; listBuah<buah_buahan.length; listBuah++) {//012
+for (let item = 0; item < buah_buahan[listBuah].length; item++) {//012 012
+   daftar_buah= `${daftar_buah} ${prop[item]} ${buah_buahan[listBuah][item]} \n`
+  } 
+   }
+
+}
+alert(daftar_buah)
+
+
+// input=prompt(firstDisplay)
+ 
+
+  
+
+
+
+// //menambahkan buah
+if(input==2){var add_buah=prompt("silahkan tambahan buah ya");
+buah_buahan[buah_buahan.length]= [add_buah.split(",")[0],  parseInt(add_buah.split(",")[1]), parseInt(add_buah.split(",")[2])]
+console.log(buah_buahan)
+
+let addNotif="" 
+for (let index=0; index<buah_buahan.length; index++){
+  addNotif=`${addNotif}${index+1} ${buah_buahan[index]} \n` 
+}
+alert(` kini list anda menjadi \n ${addNotif} `)
+}
+
+
+
+
+
+
+
+
+
+//menghapus buah
+// if(input==3){let delete_buah=prompt("silahkan hapus ")
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

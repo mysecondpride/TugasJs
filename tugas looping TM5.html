@@ -1,0 +1,99 @@
+<html>
+  <p>Total Pesanan Anggur:<span id="idAnggur"></span></p>
+
+  <h2> Pengaturan Ulang Oder Anggur</h2>
+  <button onclick="incrementAnggur()">+</button>
+  <button onclick ="penguranganAnggur">-</button>
+
+  <h1>Total Pesanan Anggur:</h1>
+  <p id="FOapel"> </p>
+  <h2> Pengaturan Ulang Oder Apel</h2>
+  <button onclick="penambahanApel">+</button>
+  <button onclick ="penguranganApel">-</button>
+
+  <h1>Total Pesanan Anggur:</h1>
+  <p id="FOpisang"> </p>
+  <h2> Pengaturan Ulang Oder Pisang</h2>
+  <button onclick="penambahanPisang">+</button>
+  <button onclick ="penguranganPisang">-</button>
+<script>
+let anggur =20_000
+let apel =15_000
+let pisang= 8_000
+let buah_buahan = [
+  ["anggur", "20_000",10],
+  ["apel", "15_000",12],
+  ["pisang", "8_000",5],
+];
+
+
+
+for (let i = 0; i <1;i++) {
+  for (let j = 0; j <=buah_buahan.length; j++) {
+    if (j==0){
+      alert (`klik ok untuk melakukan pemesanan, dengan list stock yang ada di toko, sbb:
+      ${buah_buahan[0][0]}, harga: ${buah_buahan[0][1]}/kg, stock tersedia:${buah_buahan[0][2]} kg
+      ${buah_buahan[1][0]}, harga: ${buah_buahan[1][1]}/kg, stock tersedia:${buah_buahan[1][2]} kg
+      ${buah_buahan[2][0]}, harga: ${buah_buahan[2][1]}/kg, stock tersedia:${buah_buahan[2][2]} kg`) 
+    } else if (j==1) {
+      pilih_buah1 = +prompt(` pilih berapa kg anggur yang anda beli dengan memasukkan qty dalam kg`)
+    } else if (j==2){
+      pilih_buah2 = +prompt(` pilih berapa kg apel yang anda beli dengan memasukkan qty dalam kg`)
+    }else if (j==3){
+      pilih_buah3 = +prompt(` pilih berapa kg pisang yang anda beli dengan memasukkan qty dalam kg`)
+    } 
+  }
+}
+
+let total_belanja= pilih_buah1*anggur +pilih_buah2*apel+pilih_buah3*pisang
+let addedOrder= alert(
+`Apakah anda ingin menambah/mengurangi pesanan??
+pesanan anda saat ini:
+${pilih_buah1}/kg ${buah_buahan[0][0]} x ${(buah_buahan[0][1])}
+${pilih_buah2}/kg ${buah_buahan[1][0]} x ${(buah_buahan[1][1])}
+${pilih_buah3}/kg ${buah_buahan[2][0]} x ${(buah_buahan[2][1])}
+Total:${total_belanja}`)
+
+
+// let countValueAnggur=pilih_buah1
+// let countValueApel = pilih_buah2
+// let countValuePisang = pilih_buah3
+
+let initialValue = pilih_buah1
+
+function updateCounter(){
+document.getElementById("idAnggur").innerText= initialValue}
+
+function incrementAnggur(){initialValue++;
+updateCounter()}
+
+console.log(incrementAnggur())
+
+
+
+
+
+
+// let pengaturanUlang2 = document.getElementById("FOapel").innerText=countValue.pilih_buah2
+// let pengaturanUlang3 = document.getElementById("FOpisang").innerText=countValue.pilih_buah3
+
+// let pengaturanUlang1_1 = document.getElementById("FOanggur").innerText=countValue.pilih_buah1
+// let pengaturanUlang2_2 = document.getElementById("FOapel").innerText=countValue.pilih_buah2
+// let pengaturanUlang3_3= document.getElementById("FOpisang").innerText=countValue.pilih_buah3
+
+
+
+
+// let incrementAnggur = pilih_buah1++
+// let decrementAnggur = pilih_buah1--
+
+
+
+
+// daftar buah yang tersedia
+// 1. Anggur : 10 kg in stock, harga perkg: 20.000
+// 2. Apel : 10 kg in stock, harga perkg: 15.000
+// 3. Pisang: 5 kg in stock, harga perkg=8 _000
+</script>
+
+</html>

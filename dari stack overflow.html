@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function loopUntilNonEmptyInput(prompt_ques, default_inp) {
+  let retval;
+  while (true) {
+    retval = (prompt(prompt_ques, default_inp));
+    
+    if (retval !== '')
+      return retval;
+      
+    alert("Empty input, please re-try");
+  }
+}
+
+let welcome;
+welcome = "Welcome to my first COMP1231 Program.";
+alert(welcome);
+
+let name = loopUntilNonEmptyInput("Please enter your name:?", "Tafadzwa Marisa");
+let program = loopUntilNonEmptyInput("Please enter your Program:?", "COMP1231");
+console.log(name, program);
+    </script>
+</body>
+</html>

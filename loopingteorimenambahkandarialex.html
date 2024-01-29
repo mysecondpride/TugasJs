@@ -1,0 +1,54 @@
+<script>
+  let buah_buahan = [
+    ["anggur", "20000", 10],
+    ["apel", "15000", 12],
+    ["pisang", "8000", 5],
+  ];
+  
+  let list_angka = [1, 2, 3, 4, 5];
+  let list_menu = [
+    "Menampilkan daftar buah-buah",
+    "Menambah buah",
+    "Menghapus buah",
+    "Membeli buah",
+    "Exit",
+  ];
+  
+  let arr1 = ",";
+  
+  for (let prop = 0; prop < list_angka.length; prop++) {
+    for (let item = prop; item >= prop; item--) {
+      arr1 = [list_angka[0], list_menu[0]];
+    }
+  }
+  
+  
+  let input =
+    +prompt(`silahkan pilih menu disini dengan menekan angka index disini
+    1. Menampilkan daftar buah-buah
+    2. Menambah buah
+    3. Menghapus buah
+    4. Membeli buah 
+    5. Exit`);
+  
+  if(input == 1){ 
+      var render = "";
+      for (let index = 0; index < buah_buahan.length; index++) {
+          render = `${render} ${index+1}  + ${buah_buahan[index]}\n`; 
+      }
+      alert(render);
+  }
+//  if(input == 2){
+//   }
+if(input == 2){
+      var test = prompt('Silahkan Tambah Data Di Sini !!!');
+      buah_buahan[buah_buahan.length]= [test.split(',')[0], parseInt(test.split(',')[1]), parseInt(test.split(',')[2])];
+      console.log(buah_buahan);
+      var render = "";
+      for (let list = 0; list < buah_buahan.length; list++) {
+          render = `${render} ${list+1}  ${buah_buahan[list]}\n`; 
+      }
+      alert(render);
+  }  
+console.log(buah_buahan)
+</script>
